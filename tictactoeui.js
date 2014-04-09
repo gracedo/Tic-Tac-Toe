@@ -5,6 +5,8 @@
 		this.game = game;
 		this.board = board;
 		this.board.find('.square').on("click", this.handleClick.bind(this));
+    this.scoreO = 0;
+    this.scoreX = 0;
 
 		this.run();
 	};
@@ -26,7 +28,6 @@
 	};
 
 	GameUI.prototype.reset = function() {
-    // $('.square').css('background-color', "");
 		$('.square').html("");
 	};
 
@@ -36,6 +37,13 @@
 
     if (game.winner()) {
       alert("Player " + game.winner() + " won!");
+      
+      if(game.winner() == "o") {
+        this.scoreO += 1;
+      } else {
+        this.scoreX += 1;
+      }
+      
 			this.game = new that.TTT.Game();
 			this.reset();
     } else {

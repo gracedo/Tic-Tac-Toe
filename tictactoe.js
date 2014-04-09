@@ -79,7 +79,7 @@
         winner = mark;
       }
     });
-
+    
     return winner;
   };
   
@@ -126,9 +126,11 @@
   };
 
   Game.prototype.winner = function () {
-    return (
+    if (
       this.diagonalWinner() || this.horizontalWinner() || this.verticalWinner()
-    );
+    ) {
+      return this.player;
+    };
   };
 
   Game.prototype.printBoard = function () {
