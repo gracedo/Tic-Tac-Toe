@@ -7,14 +7,13 @@ html, body. h1 {
 h1 {
 	font-weight: bold;
 	font-size: 60px;
-	margin: 30px;
 }
 
-div {
+div.square {
 	background: white;
 	height: 32%;
 	width: 32%;
-	border: 3px solid black;
+	border: 3px black solid;
 	float: left;
 }
 
@@ -22,5 +21,4 @@ div.container {
 	background: white;
 	height: 500px;
 	width: 500px;
-	border: 0px;
 }
