@@ -132,6 +132,22 @@
       return this.player;
     };
   };
+  
+  Game.prototype.draw = function () {
+    var game = this;
+    var indices = _.range(0, 3);
+    var isDraw = true;
+
+    _(indices).each(function (j) {
+      _(indices).each(function (i) {
+        if(game.board[i][j] === null) {
+          isDraw = false;
+        };
+      });
+    });
+    
+    return isDraw;
+  };
 
   Game.prototype.printBoard = function () {
     var game = this;

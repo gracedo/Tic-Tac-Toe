@@ -48,6 +48,10 @@
       
 			this.game = new that.TTT.Game();
 			this.reset();
+    } else if(game.draw()) {
+      alert("Draw!");
+			this.game = new that.TTT.Game();
+			this.reset();
     } else {
       game.printBoard();
     };
