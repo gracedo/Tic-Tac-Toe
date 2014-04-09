@@ -12,11 +12,12 @@
 	GameUI.prototype.handleClick = function(event){
 		var game = this.game;
 		var coords = eval($(event.target).data("id"));
-		var color = game.player === "x" ? "red" : "blue";
+    // var color = game.player === "x" ? "red" : "blue";
 
 		if (game.valid(coords)) {
 			game.move(coords);
-			$(event.target).css('background-color', color);
+      // $(event.target).css('background-color', color);
+      $(event.target).html(game.player);
 		} else {
 			alert("Invalid move!");
 		}
@@ -25,7 +26,8 @@
 	};
 
 	GameUI.prototype.reset = function() {
-		$('.square').css('background-color', "")
+    // $('.square').css('background-color', "");
+		$('.square').html("");
 	};
 
   GameUI.prototype.run = function () {
@@ -33,7 +35,7 @@
 		var gameui = this;
 
     if (game.winner()) {
-      alert("Someone won!");
+      alert("Player " + game.winner() + " won!");
 			this.game = new that.TTT.Game();
 			this.reset();
     } else {

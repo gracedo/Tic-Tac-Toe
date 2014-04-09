@@ -1,12 +1,14 @@
-html, body. h1 {
-	margin: 0;
-	padding: 0;
-	border: 0;
+body {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
 h1 {
 	font-weight: bold;
 	font-size: 60px;
+}
+
+.square {
+  font-size: 130px;
 }
 
 div.square {
