@@ -1,5 +1,7 @@
 body {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  background-image: url('http://cdn.designrshub.com/wp-content/uploads/2012/08/04_lined_paper_texture.jpg');
+  background-size: 100%;
 }
 
 h1 {
@@ -13,7 +15,6 @@ h1 {
 }
 
 div.square {
-	background: white;
 	height: 32%;
 	width: 32%;
 	border: 3px black solid;
@@ -21,7 +22,6 @@ div.square {
 }
 
 div.container {
-	background: white;
 	height: 500px;
 	width: 500px;
 }
