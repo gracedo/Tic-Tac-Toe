@@ -40,8 +40,10 @@
       
       if(game.winner() == "o") {
         this.scoreO += 1;
+        $('#o').html(this.scoreO);
       } else {
         this.scoreX += 1;
+        $('#x').html(this.scoreX);
       }
       
 			this.game = new that.TTT.Game();
